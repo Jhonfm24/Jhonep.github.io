@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAMEN PARCIAL</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="img/logo-amarillo2.png" alt="logo" height="80px">
+        </header>
+        <h1>
+            EVALUACIÓN PARCIAL
+        </h1>
+        <div class="contenedor">
+            <img src="img/Imagen de WhatsApp 2024-05-24 a las 17.10.31_53544a10.jpg" alt="ejercicio1">
+        </div>
+        <div class="solucion">
+            <script>
+                var op,opnum,lado,area,base,altura,radio,mensaje;
+                
+                op=prompt("Ingrese el número de opción (1: cuadrado, 2: rectángulo, 3: triángulo, 4: círculo):");
+                
+                opnum=parseInt(op);
+                
+                if (opnum === 1) {
+                    lado=parseFloat(prompt("Ingrese la longitud del lado del cuadrado:"));
+                    area=lado*lado;
+                    document.write("=====Calcular área del Cuadrado====="+"<br>");
+                    document.write("<br>");
+                    document.write("La Longitud de su lado es: "+lado+"<br>");
+                    document.write("El Área del cuadrado es: "+area);
+                    document.write("<br>");
+                    document.write("======Fin======");
+                } else {
+                    if (opnum === 2) {
+                        base=parseFloat(prompt("Ingrese la longitud de la base del rectángulo"));
+                        altura=parseFloat(prompt("Ingrese la altura del rectángulo"));
+                        area=base*altura;
+                        document.write("=====Calcular área del Rectangulo====="+"<br>");
+                        document.write("<br>");
+                        document.write("La Altura es: "+altura+"<br>");
+                        document.write("La Base es: "+base+"<br>");
+                        document.write("El Área del rectángulo es: "+area+"<br>");
+                        document.write("<br>");
+                        document.write("======Fin======");
+                    } else {
+                        if (opnum === 3) {
+                            base=parseFloat(prompt("Ingrese la base del triángulo"));
+                            altura=parseFloat(prompt("Ingrese la altura del triángulo"));
+                            area=(base*altura)/2;
+                            document.write("=====Calcular área del Triangulo====="+"<br>");
+                            document.write("<br>");
+                            document.write("La Altura es: "+altura+"<br>");
+                            document.write("La Base es: "+base+"<br>");
+                            document.write("El Área del Triángulo es: "+area+"<br>");
+                            document.write("<br>");
+                            document.write("======Fin======");         
+                        } else {
+                            if (opnum === 4) {
+                                radio=parseFloat(prompt("Ingrese el radio del círculo"));
+                                area=Math.PI * Math.pow(radio, 2);
+                                document.write("=====Calcular área del Círculo====="+"<br>");
+                                document.write("<br>");
+                                document.write("El Radio es:"+radio+"<br>");
+                                document.write("El Área del Círculo es: " + area.toFixed(2)+"<br>");
+                                document.write("<br>");
+                                document.write("======Fin======");
+                            } else {
+                                mensaje="La Operación no está permitida";
+                                document.write(mensaje);
+                            }
+                        }
+                    }
+                }
+            </script>
+        </div>
+    </main>
+</body>
+</html>

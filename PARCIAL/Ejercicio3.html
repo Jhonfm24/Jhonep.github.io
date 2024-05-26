@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAMEN PARCIAL</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="img/logo-amarillo2.png" alt="logo" height="80px">
+        </header>
+        <h1>
+            EVALUACIÓN PARCIAL
+        </h1>
+        <div class="contenedor">
+            <img src="img/Imagen de WhatsApp 2024-05-24 a las 17.10.06_2a72e81a.jpg" alt="ejercicio3">
+        </div>
+        <div class="solucion">
+            <script>
+                var edad,mensaje;
+
+                edad=parseInt(prompt("Ingrese la edad de la persona"));
+
+                if (edad<= 10) {
+                    mensaje="NIÑO";
+                } else {
+                    if (edad<= 15) {
+                    mensaje="PUBER"
+                } else {
+                    if (edad<= 19) {
+                        mensaje="ADOLESCENTE"
+                    } else {
+                        if (edad<= 26) {
+                            mensaje="JOVEN"
+                        } else {
+                            if (edad<= 65) {
+                                mensaje="ADULTO"
+                            } else {
+                                mensaje="ANCIANO"
+                            }
+                        }
+                    }
+                }
+            }
+
+                document.write("=====EDAD====="+"<br>");
+                document.write("<br>");
+                document.write("Tu edad es de: "+edad+"años"+"<br>");
+                document.write("Según tu edad eres un: "+mensaje+"<br>");
+                document.write("<br>");
+                document.write("======FIN======");
+            </script>
+        </div>
+    </main>
+</body>
+</html>

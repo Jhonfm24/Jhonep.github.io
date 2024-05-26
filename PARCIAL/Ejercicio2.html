@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAMEN PARCIAL</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="img/logo-amarillo2.png" alt="logo" height="80px">
+        </header>
+        <h1>
+            EVALUACIÓN PARCIAL
+        </h1>
+        <div class="contenedor">
+            <img src="img/Imagen de WhatsApp 2024-05-24 a las 17.09.54_88b3603d.jpg" alt="ejercicio2">
+        </div>
+        <div class="solucion">
+            <script>
+                var nhoras,vhora,incremento,sueldo,hextra;
+
+                nhoras=parseInt(prompt("Ingrese el número de horas trabajadas"));
+                vhora=parseInt(prompt("Ingrese el valor de soles por hora"));
+
+                if (nhoras>50) {
+                    mensaje="60%";
+                    hex=nhoras-50;
+                    incremento=vhora*1.6;
+                    sueldo=(50*vhora)+(hex*incremento);
+                } else {
+                    mensaje="No recibió incremento";
+                    hex=0
+                    sueldo=(nhoras*vhora);
+                }
+
+                document.write("=====SUELDO MENSUAL====="+"<br>");
+                document.write("<br>");
+                document.write("Cantidad de horas trabajadas: "+nhoras+"horas"+"<br>");
+                document.write("Valor en soles por hora trabajada: "+"S/."+vhora+"<br>");
+                document.write("Cantidad de horas extras: "+hex+"<br>");
+                document.write("Incremento de valor por las horas extras: "+mensaje+"<br>");
+                document.write("Sueldo Total: "+"S/."+sueldo+"<br>");
+                document.write("<br>");
+                document.write("======FIN======");
+            </script>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAMEN PARCIAL</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="img/logo-amarillo2.png" height="80px">
+        </header>
+        <h1>
+            EVALUACIÓN PARCIAL
+        </h1>
+        <div class="contenedor">
+            <img src="img/Imagen de WhatsApp 2024-05-24 a las 17.09.44_1ab06702.jpg" alt="ejercicio1">
+        </div>
+        <div class="solucion">
+            <script>
+                var nc,c_ud,importe,precio_desct,costofin,descuento;
+
+                nc=parseInt(prompt("Ingrese el número de camisas a comprar"));
+
+                if (nc>=3) {
+                    mensaje="10%";
+                    descuento=0.10;
+                    precio_desct=c_ud-(c_ud*descuento);
+                    c_ud=60;
+                    costofin=nc*(c_ud - (c_ud*descuento));
+                } else {
+                    mensaje="No se le aplico un descuento";
+                    c_ud=60;
+                    costofin=nc*c_ud;
+                }
+
+                importe=nc*c_ud;
+
+                document.write("=====PRECIO DE CAMISAS====="+"<br>");
+                document.write("<br>");
+                document.write("Cantidad de camisas compradas: "+nc+"<br>");
+                document.write("Precio por camisa: "+"S/."+c_ud+"<br>");
+                document.write("Importe: "+"S/."+importe+"<br>");
+                document.write("Descuento por camisa: "+mensaje+"<br>");
+                document.write("Costo final: "+"S/."+costofin+"<br>");
+                document.write("<br>");
+                document.write("======FIN======");
+            </script>
+        </div>
+    </main>
+</body>
+</html>

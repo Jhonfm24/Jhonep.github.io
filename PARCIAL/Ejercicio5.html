@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAMEN PARCIAL</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="img/logo-amarillo2.png" alt="logo" height="80px">
+        </header>
+        <h1>
+            EVALUACIÓN PARCIAL
+        </h1>
+        <div class="contenedor">
+            <img src="img/Imagen de WhatsApp 2024-05-24 a las 17.10.42_6096c896.jpg" alt="ejercicio4">
+        </div>
+        <div class="solucion">
+            <script>
+                var pqtur,npers,mdpg,pq,mfinal,descuento,Seguro,Traslado,impuestoP;
+
+                pqtur=prompt("Ingrese el paquete turístico escogido (Colca, Cusco, Máncora u otro destino):");
+                npers=parseInt(prompt("Ingrese la cantidad de personas:"));
+                mdpg=prompt("Ingrese la forma de pago (al contado, con tarjeta o transferencia):");
+
+                Seguro=140;
+                Traslado=150;
+                impuestoP=0.02; 
+
+                let costo;
+                switch (pqtur.toLowerCase()) {
+                    case "colca":
+                        pq=550;
+                        costo =pq;
+                        break;
+                    case "cusco":
+                        pq=700;
+                        costo = pq;
+                        break;
+                    case "máncora":
+                        pq=450;
+                        costo=pq;
+                        break;
+                    default:
+                        pq=440;
+                }
+
+                impuesto=(pq*impuestoP)*npers;
+                Total=(pq*npers) + (Seguro*npers) + (Traslado*npers) + impuesto;
+
+                if (mdpg .toLowerCase() === "al contado") {
+                    mensaje="10%";
+                    descuento=Total*0.10;
+                    mfinal=(Total-descuento);
+                } else {
+                    if (mdpg.toLowerCase() === "con tarjeta") {
+                        mensaje="5%";
+                        descuento=Total*0.05;
+                        mfinal=(Total-descuento);
+                    }
+                }
+
+                document.write("======TOTAL DE PAGOS REALIZADOS======"+"<br>");
+                document.write("<br>");
+                document.write("Paquete Turistico: "+pqtur+"<br>");
+                document.write("Número de Personas: "+npers+"<br>");
+                document.write("Costo del Paquete por persona: "+"S/."+pq+"<br>");
+                document.write("Costo del Seguro por persona: "+"S/."+Seguro+"<br>");
+                document.write("Costo del Traslado por persona: "+"S/."+Traslado+"<br>");
+                document.write("Impuesto: "+"S/."+impuesto+"<br>");
+                document.write("Costo total: "+"S/."+Total+"<br>");
+                document.write("Descuento por medio de Pago: "+mensaje+"<br>");
+                document.write("Monto final: "+"S/."+mfinal+"<br>");
+                document.write("<br>");
+                document.write("======FIN======");
+            </script>
+        </div>
+    </main>
+</body>
+</html>
